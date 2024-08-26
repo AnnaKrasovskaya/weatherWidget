@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+    background: url('bg.avif') no-repeat center / cover;
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 768px;
+    margin: auto;
+    gap: 10px;
+
+}
+@media (max-width: 768px) {
+  #app {
+      height: auto;
+  }
+}
+
+.weather-element {
+    transition: .3s;
+    cursor: pointer;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 3px 15px #457b99;
+}
+.weather-element:hover {
+    background: linear-gradient(45deg, rgba(104, 166, 234, 0.75), rgba(148, 186, 229, 0.85));
+    color: #fff;
+}
+
+.weather-element .info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    gap: 10px;
+
+}
+
+.weather-element .icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    flex-basis: 54.5%;
+    font-weight: 900;
+}
+
+.weather-element .wind {
+    display: none;
+}
+
+.weather-element .wether-description {
+    display: none;
+}
+
+.weather-element.active {
+    background: linear-gradient(45deg, rgba(104, 166, 234, 0.75), rgba(148, 186, 229, 0.85));
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+}
+
+.weather-element.active .wether-description {
+    display: block;
+}
+
+.weather-element.active .icon {
+    flex-basis: unset;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.weather-element.active .wind {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
